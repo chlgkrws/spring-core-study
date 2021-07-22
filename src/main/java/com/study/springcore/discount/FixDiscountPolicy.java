@@ -3,7 +3,7 @@ package com.study.springcore.discount;
 import com.study.springcore.member.Grade;
 import com.study.springcore.member.Member;
 
-public class FixDiscountPoliscy implements DiscountPolicy{
+public class FixDiscountPolicy implements DiscountPolicy{
 
     private int discountFixAmount = 1000; //1000원 할인
 
