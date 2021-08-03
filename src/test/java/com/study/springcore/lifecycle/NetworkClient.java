@@ -1,5 +1,8 @@
 package com.study.springcore.lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClient {
 
     private String url;
@@ -26,11 +29,13 @@ public class NetworkClient {
         System.out.println("close:" + url);
     }
 
+    @PreDestroy
     public void close() throws Exception {
         System.out.println("NetworkClient.close");
         disconnect();
     }
 
+    @PostConstruct
     public void init() throws Exception {
         System.out.println("NetworkClient.init");
         connect();
