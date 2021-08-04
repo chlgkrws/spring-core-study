@@ -26,6 +26,8 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 
+	// provider
+	implementation 'javax.inject:javax.inject:1'
 }
 
 test {
