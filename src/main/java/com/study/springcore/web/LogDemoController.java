@@ -1,6 +1,7 @@
 package com.study.springcore.web;
 
-import com.study.springcore.MyLogger;
+import com.study.springcore.common.MyLogger;
+import com.study.springcore.web.LogDemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,16 +12,21 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequiredArgsConstructor
 public class LogDemoController {
+
     private final LogDemoService logDemoService;
     private final MyLogger myLogger;
 
     @RequestMapping("log-demo")
     @ResponseBody
-    public String logDemo(HttpServletRequest request) {
+    public String logDemo(HttpServletRequest request){
         String requestURL = request.getRequestURL().toString();
         myLogger.setRequestURL(requestURL);
+
+        System.out.println(myLogger.getClass());
         myLogger.log("controller test");
         logDemoService.logic("testId");
+
         return "OK";
     }
+
 }
