@@ -9,7 +9,7 @@
 ### 프로젝트 관리🏷
 
 
-공부한 내용은 따로 [노션]()에 정리 하고, 소스는 spring-core-study에서 관리한다
+공부한 내용은 따로 [노션](https://rare-clematis-067.notion.site/58a109c1e9234c43b7f56849a04241dc)에 정리 하고, 소스는 spring-core-study에서 관리한다
 
 
 ### 스터드 키워드 정리📗
